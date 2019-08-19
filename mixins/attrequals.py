@@ -1,6 +1,9 @@
 
 
 class EqOnAttrsMixin:
+    """
+    Allows class equality to be compared on the equality of the attribute names listed in equal_attrs.
+    """
     equal_attrs = None
 
     def __eq__(self, other):
@@ -18,6 +21,10 @@ class EqOnAttrsMixin:
 
 
 class EqOnAttrsWithConversionMixin(EqOnAttrsMixin):
+    """
+    Allows class equality to be compared on the equality of the attribute names listed in equal_attrs, converting
+    all attributes to convert_type before comparing.
+    """
     convert_type = str
 
     def __eq__(self, other):
@@ -35,6 +42,9 @@ class EqOnAttrsWithConversionMixin(EqOnAttrsMixin):
 
 
 class EqHashMixin:
+    """
+    Sets __hash__ based on attributes named in equal_attrs only.
+    """
     equal_attrs = None
 
     def __hash__(self):

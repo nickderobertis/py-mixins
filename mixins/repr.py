@@ -1,7 +1,7 @@
-from dero.latex.logic.tools import _readable_repr
-
-
 class ReprMixin:
+    """
+    Sets class __repr__ method based on the attributes named in repr_cols.
+    """
     repr_cols = []
 
     def __repr__(self):
@@ -19,12 +19,22 @@ class ReprMixin:
 
 def show_contents(obj):
     """
-    Used to view what's inside a latex table object
-
-    >>>import dero.latex.table as lt
-    >>>dt = lt.DataTable.from_df(some_df)
-    >>>show_contents(dt)
+    Used to view what's inside an object with pretty printing
     :param obj:
     :return:
     """
     print(_readable_repr(repr(obj)))
+
+
+def _readable_repr(repr_str):
+    out_letters = []
+    num_tabs = 1
+    for letter in repr_str:
+        if letter in (')',']'):
+            num_tabs -= 1
+            out_letters += ['\n'] + ['   '] * num_tabs
+        out_letters.append(letter)
+        if letter in ('(','['):
+            out_letters += ['\n'] + ['   '] * num_tabs
+            num_tabs += 1
+    return ''.join(out_letters)
