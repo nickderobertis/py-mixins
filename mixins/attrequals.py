@@ -48,4 +48,6 @@ class EqHashMixin:
     equal_attrs = None
 
     def __hash__(self):
+        if self.equal_attrs is None:
+            return super().__hash__()
         return hash(tuple([getattr(self, attr) for attr in self.equal_attrs]))
