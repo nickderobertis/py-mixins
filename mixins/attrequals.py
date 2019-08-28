@@ -8,7 +8,7 @@ class EqOnAttrsMixin:
 
     def __eq__(self, other):
         if self.equal_attrs is None:
-            return self == other
+            return super().__eq__(other)
 
         for equal_attr in self.equal_attrs:
             if not hasattr(other, equal_attr): # other object doesn't have this property, must not be equal
