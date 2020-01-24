@@ -7,7 +7,5 @@ certain functionality to them.
 
 ## Links
 
-See the 
-[documentation here.](
-https://whoopnip.github.io/py-mixins/
-)
+See the
+[documentation here.](https://nickderobertis.github.io/py-mixins/)

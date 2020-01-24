@@ -60,6 +60,6 @@ DOCS_OTHER_MOCK_IMPORTS = [
 ]
 
 PACKAGE_URLS = {
-    'Code': 'https://github.com/whoopnip/py-mixins/',
-    'Documentation': 'https://whoopnip.github.io/py-mixins/'
+    'Code': 'https://github.com/nickderobertis/py-mixins/',
+    'Documentation': 'https://nickderobertis.github.io/py-mixins/'
 }
