@@ -5,30 +5,31 @@
 
 ## Overview
 
-This repo is a template to use for starting a new Python package
-which is hosted on PyPi and uses Sphinx for documentation
-hosted on Github pages. It has a built-in CI/CD system using Github Actions. See 
-[the example generated repo](https://github.com/whoopnip/pypi-sphinx-quickstart)
-for features and setup. This README is kept minimal as you will be replacing
-its content after using `cookiecutter`.
+Mixin classes which may be added to your own classes to add certain functionality to them.
 
 ## Getting Started
 
-Install the latest Cookiecutter if you haven't installed it yet:
+Install `mixins`:
 
-    pip install -U cookiecutter
+```
+pip install mixins
+```
 
-Generate a Python package project:
+A simple example:
 
-    cookiecutter https://github.com/whoopnip/cookiecutter-pypi-sphinx.git
-    
-Follow the instructions on 
-[the example generated repo](https://github.com/whoopnip/pypi-sphinx-quickstart)
-for the remaining setup.
+```python
+import mixins
+
+# Do something with mixins
+```
 
 ## Links
 
-See the 
+See the
 [documentation here.](
 https://nickderobertis.github.io/py-mixins/
 )
+
+## Author
+
+Created by Nick DeRobertis. MIT License.
