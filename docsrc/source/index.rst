@@ -19,7 +19,7 @@ An overview
 ===========
 
 
-.. autosummary::
+.. autosummarynameonly::
 
       mixins.repr.ReprMixin
       mixins.propertycache.SimplePropertyCacheMixin

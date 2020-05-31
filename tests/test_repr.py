@@ -1,6 +1,7 @@
-from mixins.repr import ReprMixin
+from mixins import ReprMixin
 
 # TODO: more comprehensive tests for ReprMixin
+
 
 def test_repr():
     class ExampleClass(ReprMixin):
