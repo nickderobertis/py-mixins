@@ -1,0 +1,329 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>mixins package &mdash; mixins 0.1.2 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="mixins" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> mixins
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Getting started with mixins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">This is my gallery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">mixins</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">mixins package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mixins.attrequals">mixins.attrequals module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mixins.propertycache">mixins.propertycache module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-mixins.repr">mixins.repr module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">mixins</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">mixins</a> &raquo;</li>
+        
+      <li>mixins package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/mixins.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-mixins">
+<span id="mixins-package"></span><h1>mixins package<a class="headerlink" href="#module-mixins" title="Permalink to this headline">¶</a></h1>
+<p>This is package includes Mixin classes which may be added to your own project classes to add
+certain functionality to them.</p>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-mixins.attrequals">
+<span id="mixins-attrequals-module"></span><h2>mixins.attrequals module<a class="headerlink" href="#module-mixins.attrequals" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="mixins.attrequals.EqHashMixin">
+<em class="property">class </em><code class="sig-prename descclassname">mixins.attrequals.</code><code class="sig-name descname">EqHashMixin</code><a class="reference internal" href="../_modules/mixins/attrequals.html#EqHashMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mixins.attrequals.EqHashMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Sets __hash__ based on attributes named in equal_attrs only.</p>
+<dl class="py attribute">
+<dt id="mixins.attrequals.EqHashMixin.equal_attrs">
+<code class="sig-name descname">equal_attrs</code><em class="property"> = None</em><a class="headerlink" href="#mixins.attrequals.EqHashMixin.equal_attrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="mixins.attrequals.EqOnAttrsMixin">
+<em class="property">class </em><code class="sig-prename descclassname">mixins.attrequals.</code><code class="sig-name descname">EqOnAttrsMixin</code><a class="reference internal" href="../_modules/mixins/attrequals.html#EqOnAttrsMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mixins.attrequals.EqOnAttrsMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Allows class equality to be compared on the equality of the attribute names listed in equal_attrs.</p>
+<dl class="py attribute">
+<dt id="mixins.attrequals.EqOnAttrsMixin.equal_attrs">
+<code class="sig-name descname">equal_attrs</code><em class="property"> = None</em><a class="headerlink" href="#mixins.attrequals.EqOnAttrsMixin.equal_attrs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="mixins.attrequals.EqOnAttrsWithConversionMixin">
+<em class="property">class </em><code class="sig-prename descclassname">mixins.attrequals.</code><code class="sig-name descname">EqOnAttrsWithConversionMixin</code><a class="reference internal" href="../_modules/mixins/attrequals.html#EqOnAttrsWithConversionMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mixins.attrequals.EqOnAttrsWithConversionMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#mixins.attrequals.EqOnAttrsMixin" title="mixins.attrequals.EqOnAttrsMixin"><code class="xref py py-class docutils literal notranslate"><span class="pre">mixins.attrequals.EqOnAttrsMixin</span></code></a></p>
+<p>Allows class equality to be compared on the equality of the attribute names listed in equal_attrs, converting
+all attributes to convert_type before comparing.</p>
+<dl class="py attribute">
+<dt id="mixins.attrequals.EqOnAttrsWithConversionMixin.convert_type">
+<code class="sig-name descname">convert_type</code><a class="headerlink" href="#mixins.attrequals.EqOnAttrsWithConversionMixin.convert_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">builtins.str</span></code></p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-mixins.propertycache">
+<span id="mixins-propertycache-module"></span><h2>mixins.propertycache module<a class="headerlink" href="#module-mixins.propertycache" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="mixins.propertycache.SimplePropertyCacheMixin">
+<em class="property">class </em><code class="sig-prename descclassname">mixins.propertycache.</code><code class="sig-name descname">SimplePropertyCacheMixin</code><a class="reference internal" href="../_modules/mixins/propertycache.html#SimplePropertyCacheMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mixins.propertycache.SimplePropertyCacheMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Supports caching properties.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-mixins.repr">
+<span id="mixins-repr-module"></span><h2>mixins.repr module<a class="headerlink" href="#module-mixins.repr" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="mixins.repr.ReprMixin">
+<em class="property">class </em><code class="sig-prename descclassname">mixins.repr.</code><code class="sig-name descname">ReprMixin</code><a class="reference internal" href="../_modules/mixins/repr.html#ReprMixin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mixins.repr.ReprMixin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Sets class __repr__ method based on the attributes named in repr_cols.</p>
+<dl class="py method">
+<dt id="mixins.repr.ReprMixin.readable_repr">
+<em class="property">property </em><code class="sig-name descname">readable_repr</code><a class="headerlink" href="#mixins.repr.ReprMixin.readable_repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="mixins.repr.ReprMixin.repr_cols">
+<code class="sig-name descname">repr_cols</code><em class="property">: List[str]</em><em class="property"> = []</em><a class="headerlink" href="#mixins.repr.ReprMixin.repr_cols" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="mixins.repr.show_contents">
+<code class="sig-prename descclassname">mixins.repr.</code><code class="sig-name descname">show_contents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">obj</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/mixins/repr.html#show_contents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#mixins.repr.show_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to view what’s inside an object with pretty printing
+:param _sphinx_paramlinks_mixins.repr.show_contents.obj:
+:return:</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="modules.html" class="btn btn-neutral float-left" title="mixins" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, Nick DeRobertis
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-167962954-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>
