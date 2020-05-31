@@ -1,6 +1,3 @@
 
 
-# TODO: add tests
-
-def test_dummy():
-    pass
+# TODO: add tests for attr equals and property cache
