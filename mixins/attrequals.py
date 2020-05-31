@@ -1,3 +1,4 @@
+from typing import Sequence, Any, Tuple
 
 
 class EqOnAttrsMixin:
@@ -46,8 +47,31 @@ class EqHashMixin:
     Sets __hash__ based on attributes named in equal_attrs only.
     """
     equal_attrs = None
+    _recursive_hash_convert = False
 
     def __hash__(self):
         if self.equal_attrs is None:
             return super().__hash__()
-        return hash(tuple([getattr(self, attr) for attr in self.equal_attrs]))
+
+        contents = [getattr(self, attr) for attr in self.equal_attrs]
+
+        if self._recursive_hash_convert:
+            tup_contents = _convert_lists_to_tuples(contents)
+        else:
+            tup_contents = tuple(contents)
+
+        return hash(tup_contents)
+
+
+def _convert_lists_to_tuples(seq: Sequence) -> Tuple[Any, ...]:
+    items = []
+    for item in seq:
+        if isinstance(item, list):
+            new_item = _convert_lists_to_tuples(item)
+        else:
+            new_item = item
+        items.append(new_item)
+
+    items_tup = tuple(items)
+
+    return items_tup
