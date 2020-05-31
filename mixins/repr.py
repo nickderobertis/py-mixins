@@ -1,8 +1,11 @@
+from typing import List
+
+
 class ReprMixin:
     """
     Sets class __repr__ method based on the attributes named in repr_cols.
     """
-    repr_cols = []
+    repr_cols: List[str] = []
 
     def __repr__(self):
         if self.repr_cols:
