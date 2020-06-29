@@ -1,3 +1,4 @@
+import json
 from typing import Sequence, Any, Tuple
 
 
@@ -56,18 +57,21 @@ class EqHashMixin:
         contents = [getattr(self, attr) for attr in self.equal_attrs]
 
         if self._recursive_hash_convert:
-            tup_contents = _convert_lists_to_tuples(contents)
+            tup_contents = _convert_nested_builtins_to_hashable(contents)
         else:
             tup_contents = tuple(contents)
 
         return hash(tup_contents)
 
 
-def _convert_lists_to_tuples(seq: Sequence) -> Tuple[Any, ...]:
+def _convert_nested_builtins_to_hashable(seq: Sequence) -> Tuple[Any, ...]:
     items = []
+    new_item: Any
     for item in seq:
-        if isinstance(item, list):
-            new_item = _convert_lists_to_tuples(item)
+        if isinstance(item, (list, tuple)):
+            new_item = _convert_nested_builtins_to_hashable(item)
+        elif isinstance(item, dict):
+            new_item = json.dumps(item)
         else:
             new_item = item
         items.append(new_item)
@@ -75,3 +79,4 @@ def _convert_lists_to_tuples(seq: Sequence) -> Tuple[Any, ...]:
     items_tup = tuple(items)
 
     return items_tup
+
