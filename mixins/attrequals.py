@@ -66,6 +66,7 @@ class EqHashMixin:
 
 def _convert_nested_builtins_to_hashable(seq: Sequence) -> Tuple[Any, ...]:
     items = []
+    new_item: Any
     for item in seq:
         if isinstance(item, (list, tuple)):
             new_item = _convert_nested_builtins_to_hashable(item)
