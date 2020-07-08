@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Any, Optional
 
 
 class ReprMixin:
@@ -6,18 +6,31 @@ class ReprMixin:
     Sets class __repr__ method based on the attributes named in repr_cols.
     """
     repr_cols: List[str] = []
+    _truncate_length: Optional[int] = None
 
     def __repr__(self):
-        if self.repr_cols:
-            repr_col_strs = [f'{col}={repr(getattr(self, col, None))}' for col in self.repr_cols]
-            repr_col_str = f'({", ".join(repr_col_strs)})'
-        else:
-            repr_col_str = ''
-        return f'<{type(self).__name__}{repr_col_str}>'
+        orig_repr = get_repr(self, self.repr_cols)
+        if self._truncate_length is None:
+            return orig_repr
+
+        return _truncate_repr(orig_repr, self._truncate_length)
+
+    @property
+    def _full_repr(self):
+        return get_repr(self, self.repr_cols)
 
     @property
     def readable_repr(self):
-        return show_contents(self)
+        return _readable_repr(self._full_repr)
+
+
+def get_repr(obj: Any, cols: Optional[List[str]]) -> str:
+    if cols:
+        repr_col_strs = [f'{col}={repr(getattr(obj, col, None))}' for col in cols]
+        repr_col_str = f'({", ".join(repr_col_strs)})'
+    else:
+        repr_col_str = ''
+    return f'<{type(obj).__name__}{repr_col_str}>'
 
 
 def show_contents(obj):
@@ -38,6 +51,14 @@ def _readable_repr(repr_str):
             out_letters += ['\n'] + ['   '] * num_tabs
         out_letters.append(letter)
         if letter in ('(','['):
-            out_letters += ['\n'] + ['   '] * num_tabs
             num_tabs += 1
+            out_letters += ['\n'] + ['   '] * num_tabs
     return ''.join(out_letters)
+
+
+def _truncate_repr(repr_str: str, length: int) -> str:
+    if len(repr_str) <= length + 3:
+        # Add 3 because truncating would add ...
+        return repr_str
+
+    return repr_str[:length] + '...' + repr_str[-1]
